@@ -1,0 +1,98 @@
+:root {
+  --text-color: black;
+  --text-color-hover: white;
+  --buttonColor: white;
+  --buttonBackgroundColor: white;
+  --green: green;
+  --red: tomato;
+  --activePage: rgb(0, 77, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-size: 16px;
+}
+
+.buttonOutline {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  background-color: var(--buttonBackgroundColor);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.25s ease-in-out, color 0.35s ease-in-out;
+}
+
+.btnSizeS {
+  padding: 5px 10px;
+}
+.btnSizeM {
+  padding: 8px 15px;
+}
+.btnSizeL {
+  padding: 10px 20px;
+}
+.btnSizeXL {
+  padding: 12px 25px;
+}
+
+.buttonOutline:hover {
+  color: var(--buttonColor);
+}
+
+.success {
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.success:hover {
+  background-color: var(--green);
+}
+
+.danger {
+  color: var(--red);
+  border: 1px solid var(--red);
+}
+
+.danger:hover {
+  background-color: var(--red);
+}
+
+/* loader */
+.loader {
+  width: 100%;
+  height: 4.8px;
+  display: inline-block;
+  position: relative;
+  background: rgba(0, 0, 0, 0.075);
+  /* border: 1px solid rgba(0, 0, 0, 0.073); */
+  overflow: hidden;
+}
+.loader::after {
+  content: '';
+  width: 192px;
+  height: 4.8px;
+  background: var(--green);
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  animation: animloader 2s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(0%);
+  }
+}
+    
+/* loader end */
